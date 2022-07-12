@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Page implementation class", "Page implementation class\Page implementation class.csproj", "{91D3020C-10F5-4252-9724-1ADC3CB3C65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counting method of the class", "Counting method of the class\Counting method of the class.csproj", "{8373386E-50D0-4AF4-9A85-5CD2729FA88C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counting method of the class.Test", "Counting method of the class.Test\Counting method of the class.Test.csproj", "{57F90E50-C106-4A5F-B6FF-42F6A4893EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91D3020C-10F5-4252-9724-1ADC3CB3C65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D3020C-10F5-4252-9724-1ADC3CB3C65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D3020C-10F5-4252-9724-1ADC3CB3C65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D3020C-10F5-4252-9724-1ADC3CB3C65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8373386E-50D0-4AF4-9A85-5CD2729FA88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8373386E-50D0-4AF4-9A85-5CD2729FA88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8373386E-50D0-4AF4-9A85-5CD2729FA88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8373386E-50D0-4AF4-9A85-5CD2729FA88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F90E50-C106-4A5F-B6FF-42F6A4893EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F90E50-C106-4A5F-B6FF-42F6A4893EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F90E50-C106-4A5F-B6FF-42F6A4893EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F90E50-C106-4A5F-B6FF-42F6A4893EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
