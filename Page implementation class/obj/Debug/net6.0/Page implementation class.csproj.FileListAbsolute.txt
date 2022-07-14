@@ -1,0 +1,15 @@
+/home/nikolai/RiderProjects/Tasks/Page implementation class/bin/Debug/net6.0/Page implementation class
+/home/nikolai/RiderProjects/Tasks/Page implementation class/bin/Debug/net6.0/Page implementation class.deps.json
+/home/nikolai/RiderProjects/Tasks/Page implementation class/bin/Debug/net6.0/Page implementation class.runtimeconfig.json
+/home/nikolai/RiderProjects/Tasks/Page implementation class/bin/Debug/net6.0/Page implementation class.dll
+/home/nikolai/RiderProjects/Tasks/Page implementation class/bin/Debug/net6.0/ref/Page implementation class.dll
+/home/nikolai/RiderProjects/Tasks/Page implementation class/bin/Debug/net6.0/Page implementation class.pdb
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.csproj.AssemblyReference.cache
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.GeneratedMSBuildEditorConfig.editorconfig
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.AssemblyInfoInputs.cache
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.AssemblyInfo.cs
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.csproj.CoreCompileInputs.cache
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.dll
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/ref/Page implementation class.dll
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.pdb
+/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/Debug/net6.0/Page implementation class.genruntimeconfig.cache
