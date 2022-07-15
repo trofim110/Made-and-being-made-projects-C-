@@ -1,0 +1,5 @@
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.csproj.AssemblyReference.cache
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.GeneratedMSBuildEditorConfig.editorconfig
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.AssemblyInfoInputs.cache
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.AssemblyInfo.cs
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.csproj.CoreCompileInputs.cache

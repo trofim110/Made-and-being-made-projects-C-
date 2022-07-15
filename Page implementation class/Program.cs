@@ -1,8 +1,8 @@
-﻿class PageableCollection<T>
+﻿public class PageableCollection<T>
 {
     private List<T> _page = new List<T>();
-    private int pageNumber=1;
-    private int index=0;
+    private int pageNumber;
+    private int index;
 
 
 
@@ -28,7 +28,8 @@
     }
 
 
-    public PageableCollection(List<T> Page)=> _page = Page; //Конструктор
+    public PageableCollection(List<T> Page)
+        => _page = Page; //Конструктор
 
 
 
@@ -73,20 +74,13 @@ class project
     {
 
 
-            var page = new List<string>(){"343","2222","3333","4444"};
+            var page = new List<string>(){};
             var aaa = new PageableCollection<string>(page);
-            Console.WriteLine(aaa.CurrentPage());
-            aaa.TurnPageForward();
-            Console.WriteLine(aaa.CurrentPage());
-            aaa.TurnPageForward();
-            Console.WriteLine(aaa.CurrentPage());
-            aaa.TurnPageForward();
-            Console.WriteLine(aaa.CurrentPage());
-            aaa.TurnPageForward();
-            Console.WriteLine(aaa.CurrentPage());
-            aaa.OpenPage(5);
-            Console.WriteLine(aaa.CurrentPage());
-            aaa.TurnPages(2, "+");
+
+            Console.WriteLine(aaa.CurrentPageNumber);
+            Console.WriteLine(aaa.PageCount);
+
+
     }
 }
 
