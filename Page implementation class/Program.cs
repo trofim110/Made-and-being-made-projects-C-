@@ -1,63 +1,53 @@
-﻿class PageableCollection<T>
+﻿class PageableCollection
 {
     private List<string> _page = new List<string>();
-    private int pageCount;
-    private int index = 0;
-    private string __Page ;
+    private int page;
+    private int index;
 
+    public int Index
+    {
+        get{ return index;}
 
-    public PageableCollection(List<string> Page)
-    {
-        _page = Page;
-        index = _page.Count-1;
-    } //Конструктор
-    public int PageCount()
-    {
-        pageCount = _page.Count;
-        return pageCount;
-    }  // количество страниц
-    public int CurrentPageNumber()   // Текущий индекс
-    {
-        return index;
+        set
+        {
+            if (value >= 0 && value < _page.Count){ index = value;}
+            else{Console.WriteLine("Ошибка вышли за допустимые пределы индекса");}
+        }
     }
 
-
-    public void TurnPages(int pageCount, Direction direction)
+    public int Page
     {
-        index = pageCount * direction.left;
+        get{return page;}
+        set
+        {
+            if (value > 0 && value < _page.Count){ page = value;}
+            else{ Console.WriteLine("Ошибка вышли за допустимые пределы страници");}
+
+        }
     }
 
-    public void TurnPageForward()=> index++;  //переварачивает" на следующую страницу
-    public void TurnPageBackward()=> index--; //переворачивает" страницу назад
-    public void OpenPage(int pageNumber)=> Console.WriteLine(_page[index]);  //устанавливает ("открывает") текущую страницу на pageNumber
+    public PageableCollection(List<string> Page)=> _page = Page; //Конструктор
 
 
 
-    string GetPageByIndex(int index)
+    public int PageCount() {  return _page.Count;} // количество страниц в колекции
+    public int CurrentPageNumber() { return Page-1;}  // Текущий индекс
+
+
+
+    public void TurnPages(int pageCount,string direction) //переворачивает" страницы на pageCount количества в направлении Direction
     {
-        __Page = _page[index];
-        return __Page;
+        if (direction == "+"){ Page += pageCount;}
+        else if(direction=="-"){ Page-=pageCount;}
+        else{Console.WriteLine("Введите либо + если хотите вперед - если хотите назад");}
     }
 
-    string GetCurrentPage(int index)
-    {
-        __Page = _page[index];
-        return
-    }
+    public void TurnPageForward()=> Page++;  //переварачивает" на следующую страницу
+    public void TurnPageBackward()=> Page--; //переворачивает" страницу назад
+    public void OpenPage(int pageNumber)=> Console.WriteLine(_page[Page]);  //устанавливает ("открывает") текущую страницу на pageNumber
 
-    ICollection<T> GetNextPage()
-    {
-
-    }
-
-    ICollection<T> GetPreviousPage()
-    {
-
-    }
 
 }
-
-
 class project
 {
     static void Main()
@@ -65,14 +55,11 @@ class project
         List<string> page = new List<string>(){"111","2222","3333","4444"};
         PageableCollection aaa = new PageableCollection(page);
 
-
-        Console.WriteLine(aaa.PageCount());
-        Console.WriteLine(aaa.CurrentPageNumber());
-
-
-
-
-
+        Console.WriteLine(aaa.Page);
+        Console.WriteLine(aaa.Page);
+        Console.WriteLine(aaa.Page);
+        Console.WriteLine(aaa.Page);
+        Console.WriteLine(aaa.Page);
 
 
     }

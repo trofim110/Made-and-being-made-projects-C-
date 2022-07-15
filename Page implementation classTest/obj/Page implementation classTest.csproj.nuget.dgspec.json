@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/nikolai/RiderProjects/Tasks/Page implementation classTest/Page implementation classTest.csproj": {}
+  },
+  "projects": {
+    "/home/nikolai/RiderProjects/Tasks/Page implementation class/Page implementation class.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nikolai/RiderProjects/Tasks/Page implementation class/Page implementation class.csproj",
+        "projectName": "Page implementation class",
+        "projectPath": "/home/nikolai/RiderProjects/Tasks/Page implementation class/Page implementation class.csproj",
+        "packagesPath": "/home/nikolai/.nuget/packages/",
+        "outputPath": "/home/nikolai/RiderProjects/Tasks/Page implementation class/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nikolai/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.105/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/nikolai/RiderProjects/Tasks/Page implementation classTest/Page implementation classTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nikolai/RiderProjects/Tasks/Page implementation classTest/Page implementation classTest.csproj",
+        "projectName": "Page implementation classTest",
+        "projectPath": "/home/nikolai/RiderProjects/Tasks/Page implementation classTest/Page implementation classTest.csproj",
+        "packagesPath": "/home/nikolai/.nuget/packages/",
+        "outputPath": "/home/nikolai/RiderProjects/Tasks/Page implementation classTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nikolai/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/nikolai/RiderProjects/Tasks/Page implementation class/Page implementation class.csproj": {
+                "projectPath": "/home/nikolai/RiderProjects/Tasks/Page implementation class/Page implementation class.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.105/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
