@@ -1,9 +1,9 @@
 ﻿public class PageableCollection<T>
 {
-    private List<T> _page = new List<T>();
+    private List<T> _page;
     private int pageNumber;
     private int index;
-
+    private ICollection<T> pag = new List<T>();
 
 
     public int PageNumber
@@ -12,7 +12,7 @@
         set
         {
             if (value > 0 && value < _page.Count){  pageNumber = value;}
-            else{  Console.WriteLine("Вы вышли за допустимые пределы ");;}
+            else{  Console.WriteLine("Вы вышли за допустимые пределы ");}
 
         }
     }
@@ -29,23 +29,31 @@
 
 
     public PageableCollection(List<T> Page)
-        => _page = Page; //Конструктор
+    {
+        _page = Page; //Конструктор
+    }
 
 
 
     public int PageCount() {  return _page.Count;} // количество страниц в колекции
-    public int CurrentPageNumber() { return PageNumber-1;}  // Текущий индекс
+    public int CurrentPageNumber() { return PageNumber;}  // Текущий индекс
 
-    public int CurrentPage() { return PageNumber;} //  текущая страница
-
-
+    public int CurrentPage() { return PageNumber+1;} //  текущая страница
 
 
-    public void TurnPages(int pageCount,string direction) //переворачивает" страницы на pageCount количества в направлении Direction
+
+
+    public void TurnPages(int pageCount,char direction) //переворачивает" страницы на pageCount количества в направлении Direction
     {
-        if (direction == "+"){ PageNumber += pageCount;}
-        else if(direction=="-"){ PageNumber-=pageCount;}
-        else{Console.WriteLine("Введите либо + если хотите вперед - если хотите назад");}
+        switch (direction)
+        {
+            case '+' : PageNumber += pageCount;
+                break;
+            case '-' : PageNumber -= pageCount;
+                break;
+            default:Console.WriteLine("Введите либо + если хотите вперед - если хотите назад");
+                break;
+        }
     }
 
     public void TurnPageForward()=>PageNumber++;  //переварачивает" на следующую страницу
@@ -60,10 +68,25 @@
         }
         catch
         {
-           Console.WriteLine("Вы вышли за допустимые пределы страниц  ");
+           Console.WriteLine("Введите корректные данные");
         }
 
-    }// Есть исключение
+    }
+
+    ICollection<T> GetPageByIndex(int index)
+    {
+        return _page[index];
+    }
+
+
+}
+
+ public class webpage
+{
+    public int Column1 { get; set; }
+    public int Column2 { get; set; }
+    public int Column3 { get; set; }
+
 
 
 
@@ -74,11 +97,20 @@ class project
     {
 
 
-            var page = new List<string>(){};
-            var aaa = new PageableCollection<string>(page);
+            var page = new List<webpage>()
+            {
+                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3},
+                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3},
+                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3},
+                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3}
+            };
+            var aaa = new PageableCollection<webpage>(page);
 
-            Console.WriteLine(aaa.CurrentPageNumber);
-            Console.WriteLine(aaa.PageCount);
+        Console.WriteLine(aaa.PageCount());
+        Console.WriteLine(aaa.  CurrentPage());
+
+Console.WriteLine(page[0]);
+
 
 
     }
