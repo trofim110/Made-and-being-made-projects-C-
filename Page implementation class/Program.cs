@@ -1,8 +1,8 @@
 ﻿public class PageableCollection<T>
 {
     private List<T> _page;
-    private int pageNumber;
-    private int index;
+    private int pageNumber=1;
+    private int index=0;
     private ICollection<T> pag = new List<T>();
 
 
@@ -72,46 +72,36 @@
         }
 
     }
-
-    ICollection<T> GetPageByIndex(int index)
+    public   T GetPageByIndex(int index)  //возвращает элементы страницы соответствующей индексу в коллекции страниц
     {
         return _page[index];
     }
 
+    public T GetCurrentPage() //возвращает элементы с текущей страницы (начинается с 0)\\ у меня с единици
+    {
+        return _page[index];
+    }
+
+  public T GetNextPage()
+  {
+      return _page[pageNumber++];
+  }
+  public T GetPreviousPage()
+  {
+      return _page[pageNumber--];
+  }
+
 
 }
 
- public class webpage
-{
-    public int Column1 { get; set; }
-    public int Column2 { get; set; }
-    public int Column3 { get; set; }
-
-
-
-
-}
 class project
 {
     static void Main()
     {
+       var page = new List<string>(){"11111111","222222222","333333333"};
+            var aaa = new PageableCollection<string>(page);
 
-
-            var page = new List<webpage>()
-            {
-                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3},
-                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3},
-                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3},
-                new webpage() {Column1 = 1,Column2 = 2,Column3 = 3}
-            };
-            var aaa = new PageableCollection<webpage>(page);
-
-        Console.WriteLine(aaa.PageCount());
-        Console.WriteLine(aaa.  CurrentPage());
-
-Console.WriteLine(page[0]);
-
-
+       Console.WriteLine(aaa.GetPageByIndex(7));
 
     }
 }
