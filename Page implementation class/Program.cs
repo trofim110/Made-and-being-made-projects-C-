@@ -12,9 +12,10 @@ public class PageableCollection<T>
     // Минус - это работа с индексом
 
 
-    public PageableCollection(List<T> Page)
+    public PageableCollection(List<T> Page,int size)
     {
         _page = Page;
+
         if (Page.Count == 0)
         {
             throw new Exception("Вы ввели пустую коллекцию ");
