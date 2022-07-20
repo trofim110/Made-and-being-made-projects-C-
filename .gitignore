@@ -1,4 +1,11 @@
 obj/
  bin/ 
 obj/
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+.idea
 
