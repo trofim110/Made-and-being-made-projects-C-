@@ -35,7 +35,7 @@ public class PageableCollection<T>
             }
         }
     }
-    public int PageNumber //+
+    public int PageNumber
     {
         get{return  pageNumber;}
         set

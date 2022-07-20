@@ -6,45 +6,85 @@ using Xunit.Sdk;
 
 namespace Page_implementation_classTest;
 
-public class UnitTest1
+public class ReturningPageValues
 {
     [Fact]
-    public void FunctionСhecks()
+    public void UnitTest1()
     {
-        // Arrange
-        List<string> page = new List<string>() { "223", "334", "3244" };
-        int CountPage = 3;
-        int Page = 2;
+        int[] a = new[] { 1, 2, 3,4,5};
+        int[] b = new[] { 6, 7, 8,9,10 };
+        int[] c = new[] { 11, 12, 13,14,15 };
+        int[] d = new[] { 16, 17, 18,19,20 };
+        int[] e = new[] { 21, 22, 23,24,25 };
+        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
 
+        var Pages= new PageableCollection<int>(aa, 5);
 
+        Assert.Equal(Pages.GetPageByIndex(0),a );
+        Assert.Equal(Pages.GetNextPage(),b);
+        Assert.Equal(Pages. GetCurrentPage(),b);
+        Assert.Equal(Pages.GetPreviousPage(),a);
 
-        // Act
-        var Book = new PageableCollection<string>(page);
-        Book.PageCount();
-        Book.CurrentPageNumber();
+    }
+}
+public class PageFunctions
+{
+    [Fact]
+    public void UnitTest1()
+    {
+        int[] a = new[] { 1, 2, 3,4,5};
+        int[] b = new[] { 6, 7, 8,9,10 };
+        int[] c = new[] { 11, 12, 13,14,15 };
+        int[] d = new[] { 16, 17, 18,19,20 };
+        int[] e = new[] { 21, 22, 23,24,25 };
+        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
 
+        var Pages= new PageableCollection<int>(aa, 5);
 
-        // Assert
-        Equals(Book.PageCount(),  CountPage );
-        Equals(Book.CurrentPageNumber(), Page);
+        Assert.Equal(Pages.PageCount(),5 );
+        Pages.TurnPages(2, '+');
+        Assert.Equal(Pages.CurrentPageNumber(),2);
+        Pages.TurnPageForward();
+        Assert.Equal(Pages.CurrentPageNumber(),3);
+        Pages.TurnPageBackward();
+        Assert.Equal(Pages.CurrentPageNumber(),2);
+    }
+}
+public class Exceptions
+{
+    [Fact]
+    public void UnitTest1()
+    {
+        int[] a = new[] { 1, 2, 3,4,5};
+        int[] b = new[] { 6, 7, 8,9,10 };
+        int[] c = new[] { 11, 12, 13,14,15 };
+        int[] d = new[] { 16, 17, 18,19,20 };
+        int[] e = new[] { 21, 22, 23,24,25 };
+        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
+
+        var Pages= new PageableCollection<int>(aa, 5);
 
 
     }
 }
-
-public class UnitTest2
+public class ValueNull
 {
     [Fact]
-    public void Test2()
+    public void UnitTest1()
     {
-        // Arrange
-        List<string> page = new List<string>() {null,null,null };
+        int[] a = new[] { 1, 2, 3,4,5};
+        int[] b = new[] { 6, 7, 8,9,10 };
+        int[] c = new[] { 11, 12, 13,14,15 };
+        int[] d = new[] { 16, 17, 18,19,20 };
+        int[] e = new[] { 21, 22, 23,24,25 };
+        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
 
-        // Act
-        var Book = new PageableCollection<string>(page);
-        Book.CurrentPageNumber();
-        /
-            Asse
+
+        var Pages= new PageableCollection<int>(aa, 5);
+
+        Pages.OpenPage(0);
+Assert.Null(Pages.GetPreviousPage);
 
     }
 }
+
