@@ -2,6 +2,7 @@
 public class PageableCollection<T>
 {
     private List<T> _page;
+    private List<T[]> _pageArr;
     private int pageNumber=0;
     private int index=0;
     private int pageCount;
@@ -12,24 +13,22 @@ public class PageableCollection<T>
     // Минус - это работа с индексом
 
 
-    public PageableCollection(List<T> Page,int size)
+    public PageableCollection(List<T> Page)  //Конструктор для простой колекции
     {
         _page = Page;
 
-        if (Page.Count == 0)
-        {
-            throw new Exception("Вы ввели пустую коллекцию ");
-        }
+        if (Page.Count == 0) { throw new Exception("Вы ввели пустую коллекцию "); }
 
         for (int i = 0; i < _page.Count; i++)
         {
-            if (_page[i] == null)
+            if
+                (_page[i] == null)
             {
                 throw new Exception("Один из элементов null ");
             }
+
         }
     }
-
 
 
     public int PageNumber //+
@@ -159,31 +158,151 @@ public class PageableCollection<T>
             return _page[PageNumber];
         }
     }
+    public PageableCollection(List<T[]> Page,int size) //Конструктор для масива
+    {
+        _pageArr = Page;
+
+        if (Page.Count == 0)
+        {
+            throw new Exception("Вы ввели пустую коллекцию ");
+        }
+
+
+        for (int indexPage = 0; indexPage < _pageArr.Count; indexPage++)
+        {
+            if (_pageArr[indexPage].Length > size)
+            {
+                throw new Exception("Данных в странице больше положенного");
+            }
+
+            for (int indexArr = 0; indexArr < _pageArr[indexPage].Length; indexArr++)
+            {
+                if (_pageArr[indexPage][indexArr] == null)
+                {
+                    throw new Exception("в листе есть null");
+                }
+            }
+        }
+    }
 
 }
 
-public class Pas
+class trofim
 {
-
-
+    public int rost { get; set; }
+    public int ves  { get; set; }
+    public int age  { get; set; }
 }
-
-
-
-
-
-
 class project
 {
     static void Main()
     {
 
-       var page = new List<int>()
-       {
 
-       }
-       };
-       var aaa = new PageableCollection<string>(page);
+        int[] a = new[] { 1, 2, 3,4,5 };
+        int[] b = new[] { 6, 7, 8,9,10 };
+        int[] c = new[] { 11, 12, 13,14,15 };
+        int[] d = new[] { 16, 17, 18,19,20 };
+        int[] e = new[] { 21, 22, 23,24,25 };
+        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
+       var aaa = new PageableCollection<int>(aa,5);
+     Console.WriteLine(aa[1][1]);
+     Console.WriteLine("----------------------------");
+
+     var poi =new PageableCollection<trofim>()
+     {
+
+     }
+
+
+
+
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
