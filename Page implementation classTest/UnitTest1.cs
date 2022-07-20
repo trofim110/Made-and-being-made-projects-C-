@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using Xunit;
 using Xunit.Sdk;
 
@@ -8,7 +9,7 @@ namespace Page_implementation_classTest;
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
+    public void FunctionСhecks()
     {
         // Arrange
         List<string> page = new List<string>() { "223", "334", "3244" };
@@ -39,15 +40,11 @@ public class UnitTest2
         // Arrange
         List<string> page = new List<string>() {null,null,null };
 
-
-
-
         // Act
         var Book = new PageableCollection<string>(page);
         Book.CurrentPageNumber();
-
-
-
+        /
+            Asse
 
     }
 }

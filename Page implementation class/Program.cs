@@ -161,3 +161,28 @@ public class PageableCollection<T>
 
 }
 
+public class Pas
+{
+
+
+}
+
+
+
+
+
+
+class project
+{
+    static void Main()
+    {
+
+       var page = new List<int>()
+       {
+
+       }
+       };
+       var aaa = new PageableCollection<string>(page);
+
+    }
+}
