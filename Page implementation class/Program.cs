@@ -106,8 +106,7 @@ public class PageableCollection<T>
         }
         catch (ArgumentOutOfRangeException)
         {
-            Console.WriteLine("Введите корректные данные в деапозоне допустимых значений");
-            return _page[Index];
+            throw new Exception("Вы попробывали выйти за пределы");
         }
 
     }
@@ -125,8 +124,7 @@ public class PageableCollection<T>
         }
         catch (ArgumentOutOfRangeException)
         {
-          Console.WriteLine("Введите корректные данные в деапозоне допустимых значений");
-          return null;
+            throw new Exception("Вы попробывали выйти за пределы");
         }
 
     }
@@ -138,13 +136,11 @@ public class PageableCollection<T>
         }
         catch (ArgumentOutOfRangeException)
         {
-            Console.WriteLine("Введите корректные данные в деапозоне допустимых значений");
-            return null;
+            throw new Exception("Вы попробывали выйти за пределы");
+
         }
     }
 }
-
-
 
 
 

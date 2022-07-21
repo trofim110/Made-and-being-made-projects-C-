@@ -13,10 +13,8 @@ public class ReturningPageValues
     {
         int[] a = new[] { 1, 2, 3,4,5};
         int[] b = new[] { 6, 7, 8,9,10 };
-        int[] c = new[] { 11, 12, 13,14,15 };
-        int[] d = new[] { 16, 17, 18,19,20 };
-        int[] e = new[] { 21, 22, 23,24,25 };
-        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
+
+        List<int[]> aa = new List<int[]>() {a,b};
 
         var Pages= new PageableCollection<int>(aa, 5);
 
@@ -53,38 +51,26 @@ public class PageFunctions
 public class Exceptions
 {
     [Fact]
-    public void UnitTest1()
+    public void MethodExceptions()
     {
-        int[] a = new[] { 1, 2, 3,4,5};
-        int[] b = new[] { 6, 7, 8,9,10 };
-        int[] c = new[] { 11, 12, 13,14,15 };
-        int[] d = new[] { 16, 17, 18,19,20 };
-        int[] e = new[] { 21, 22, 23,24,25 };
-        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
+        int[] array1 = new[] { 1, 2, 3,4,5};
+        int[] array2 = new[] { 6, 7, 8,9,10 };
 
-        var Pages= new PageableCollection<int>(aa, 5);
+        List<int[]> MethodUnderTest = new List<int[]>() { array1, array2,};
 
+        var Pages= new PageableCollection<int>(MethodUnderTest, 5);
 
+        Assert.Throws<Exception>(() =>Pages.GetPreviousPage());
+        Pages.TurnPageForward();
+        Pages.TurnPageForward();
+        Assert.Throws<Exception>(() =>Pages.GetNextPage());
+        Assert.Throws<Exception>(() =>Pages.GetPageByIndex(5));
     }
+
+
+
+
+
 }
-public class ValueNull
-{
-    [Fact]
-    public void UnitTest1()
-    {
-        int[] a = new[] { 1, 2, 3,4,5};
-        int[] b = new[] { 6, 7, 8,9,10 };
-        int[] c = new[] { 11, 12, 13,14,15 };
-        int[] d = new[] { 16, 17, 18,19,20 };
-        int[] e = new[] { 21, 22, 23,24,25 };
-        List<int[]> aa = new List<int[]>() {a,b,c,d,e};
 
-
-        var Pages= new PageableCollection<int>(aa, 5);
-
-        Pages.OpenPage(0);
-Assert.Null(Pages.GetPreviousPage);
-
-    }
-}
 
