@@ -6,35 +6,44 @@ using Xunit.Sdk;
 
 namespace Page_implementation_classTest;
 
-public class ReturningPageValues
+public class PageFunctions
 {
     [Fact]
-    public void UnitTest1()
+    public void Indextest()
     {
-        int[] a = new[] { 1, 2, 3,4,5};
-        int[] b = new[] { 6, 7, 8,9,10 };
+        List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11};
+        var test = new PageableCollection<int>(str,3) {};
 
-        List<int[]> aa = new List<int[]>() {a,b};
-
-        var Pages= new PageableCollection<int>(aa, 5);
-
-        Assert.Equal(Pages.GetPageByIndex(0),a );
-        Assert.Equal(Pages.GetNextPage(),b);
-        Assert.Equal(Pages. GetCurrentPage(),b);
-        Assert.Equal(Pages.GetPreviousPage(),a);
+        Assert.Equal(test.PageCount(),4 );
+        test.TurnPages(2, '+');
+        Assert.Equal(test.CurrentPageNumber(),2);
+        test.TurnPageForward();
+        Assert.Equal(test.CurrentPageNumber(),3);
+        test.TurnPageBackward();
+        Assert.Equal(test.CurrentPageNumber(),2);
 
     }
 }
+public class PageData
+{
+    [Fact]
+    public void testPageData ()
+    {
+        List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11};
+        List<int> str1 = new List<int>() { 1, 2, 3 };
+        var test = new PageableCollection<int>(str,3) {};
+        Assert.Equal(test.GetPageByIndex(0), str1);
+
+    }
+}
+
+/*
 public class PageFunctions
 {
     [Fact]
     public void UnitTest1()
     {
-        int[] a = new[] { 1, 2, 3,4,5};
-        int[] b = new[] { 6, 7, 8,9,10 };
-        int[] c = new[] { 11, 12, 13,14,15 };
-        int[] d = new[] { 16, 17, 18,19,20 };
-        int[] e = new[] { 21, 22, 23,24,25 };
+
         List<int[]> aa = new List<int[]>() {a,b,c,d,e};
 
         var Pages= new PageableCollection<int>(aa, 5);
@@ -65,6 +74,7 @@ public class Exceptions
         Assert.Throws<Exception>(() =>Pages.GetNextPage());
         Assert.Throws<Exception>(() =>Pages.GetPageByIndex(5));
     }
-}
 
+}
+*/
 
