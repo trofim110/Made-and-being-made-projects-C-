@@ -146,5 +146,14 @@ public class PageableCollection<T>
 
 }
 
+class fff
+{
+    static void Main()
+    {
+        List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11};
+        var test = new PageableCollection<int>(str,3) {};
+
+    }
+}
 
 

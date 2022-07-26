@@ -31,11 +31,47 @@ public class PageData
     {
         List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11};
         List<int> str1 = new List<int>() { 1, 2, 3 };
+        List<int> str2 = new List<int>() { 4, 5, 6 };
+        List<int> str3 = new List<int>() { 7, 8, 9 };
         var test = new PageableCollection<int>(str,3) {};
+
+
+
         Assert.Equal(test.GetPageByIndex(0), str1);
+        test.TurnPageBackward();
+        Assert.Equal(test.GetCurrentPage(),str1);
+        test.TurnPageBackward();
+        Assert.Equal(test.GetNextPage(),str2);
+        Assert.Equal(test.GetPreviousPage(),str1);
 
     }
 }
+public class Exceptions
+{
+
+   [Fact]
+    public void testPageDatssssssssssssssssssssssssssssssssa ()
+    {
+        List<int> str = new List<int>() { 1, 2, 3, 4, 5,};
+        var test = new PageableCollection<int>(str,3) {};
+
+        Assert.Throws<Exception>(() =>test.GetPreviousPage());
+        test.TurnPageForward();
+        Assert.Throws<Exception>(() =>test.GetNextPage());
+        Assert.Throws<Exception>(() =>test.GetPageByIndex(5));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 public class PageFunctions
