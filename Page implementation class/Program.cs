@@ -7,22 +7,10 @@ public class PageableCollection<T>
 
      public PageableCollection(List<T> items, int pageSize)
      {
-         if (items.Count == 0)
+         if (!items?.Any() ?? false)
          {
-             throw new Exception("Вы ввели пустую колекцию");
+             throw new Exception("Вы ввели некоректную колекцию");
          }
-
-         for (int i = 0; i < items.Count; i++)
-         {
-             if (items[i]==null)
-             {
-                 throw new Exception("Ошибка в колекции Null");
-             }
-             else if (items==null)
-             {
-                 throw new Exception("Ошибка  Null");
-             }
-         }//Проверка на Null
 
          for (int i = 0; i < items.Count;)
         {
@@ -33,7 +21,6 @@ public class PageableCollection<T>
               if ((items.Count % pageSize!=0)&&(items.Count-i<pageSize)) // Проверка:(Остаток от деления не ноль)И(разница меду количеством элементов и индексом меньше чем размер страниц)
               {
                   pages.Add(items.GetRange(i,items.Count % pageSize));
-                  pageCount = pages.Count;
                   break;
               }
           }
@@ -41,7 +28,10 @@ public class PageableCollection<T>
           {
               break;
           }
-        }
+        } pageCount = pages.Count;
+
+
+
      }
 
      public int Index
@@ -111,7 +101,8 @@ public class PageableCollection<T>
          }
          catch (ArgumentOutOfRangeException)
          {
-             throw new Exception("Вы попробывали выйти за пределы");
+             Console.WriteLine("Вы попробывали выйти за пределы");
+             return pages[0];
          }
 
      }
