@@ -18,7 +18,7 @@ public class PageableCollection<T>
           if (items.Count-i>pageSize)
           {
               i += pageSize;
-              if ((items.Count % pageSize!=0)&&(items.Count-i<pageSize)) // Проверка:(Остаток от деления не ноль)И(разница меду количеством элементов и индексом меньше чем размер страниц)
+              if ((items.Count-i<pageSize))
               {
                   pages.Add(items.GetRange(i,items.Count % pageSize));
                   break;
@@ -141,9 +141,9 @@ class fff
 {
     static void Main()
     {
-        List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11};
+        List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10};
         var test = new PageableCollection<int>(str,3) {};
-
+        test.OpenPage(3);
     }
 }
 
