@@ -58,6 +58,5 @@ public class Exceptions
         Assert.Throws<Exception>(() =>test.GetPreviousPage());
         test.TurnPageForward();
         Assert.Throws<Exception>(() =>test.GetNextPage());
-        Assert.Throws<Exception>(() =>test.GetPageByIndex(5));
     }
 }

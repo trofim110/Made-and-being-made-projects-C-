@@ -24,10 +24,10 @@
     &lt;TestId&gt;xUnit::A202FDD8-7A9C-414E-B672-7F8B470085C5::net6.0::Page_implementation_classTest.ValueNull&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9f8f6247_002D7e11_002D42ce_002Da559_002Dbac89554438c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9f8f6247_002D7e11_002D42ce_002Da559_002Dbac89554438c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f597b248_002D91bf_002D4a39_002Dae80_002Dec3d6ccf95a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Counting method of the class.Test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f597b248_002D91bf_002D4a39_002Dae80_002Dec3d6ccf95a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;Counting method of the class.Test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Or&gt;
     &lt;Project Location="/home/nikolai/RiderProjects/Tasks/Counting method of the class.Test" Presentation="&amp;lt;Counting method of the class.Test&amp;gt;" /&gt;
     &lt;TestAncestor&gt;

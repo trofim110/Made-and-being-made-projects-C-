@@ -18,7 +18,7 @@ public class PageableCollection<T>
           if (items.Count-i>pageSize)
           {
               i += pageSize;
-              if ((items.Count-i<pageSize))
+              if (items.Count-i<pageSize)
               {
                   pages.Add(items.GetRange(i,items.Count % pageSize));
                   break;
@@ -137,14 +137,6 @@ public class PageableCollection<T>
 
 }
 
-class fff
-{
-    static void Main()
-    {
-        List<int> str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9,10};
-        var test = new PageableCollection<int>(str,3) {};
-        test.OpenPage(3);
-    }
-}
+
 
 
