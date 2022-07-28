@@ -25,3 +25,10 @@
         return array[Index];
     }
 }
+class  sss
+{
+    static void Main()
+    {
+
+    }
+}

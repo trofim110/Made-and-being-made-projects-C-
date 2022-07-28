@@ -11,7 +11,6 @@ public class PageableCollection<T>
          {
              throw new Exception("Вы ввели некоректную колекцию");
          }
-
          for (int i = 0; i < items.Count;)
         {
           pages.Add(items.GetRange(i,pageSize));//Добавляем страници в колекции
@@ -24,16 +23,9 @@ public class PageableCollection<T>
                   break;
               }
           }
-          else
-          {
-              break;
-          }
+          else { break; }
         } pageCount = pages.Count;
-
-
-
      }
-
      public int Index
      {
          get { return ingex; }
@@ -49,15 +41,9 @@ public class PageableCollection<T>
              }
          }
      }
+     public int PageCount()  { return pageCount; } //возвращает количество страниц в коллекции
+     public int CurrentPageNumber() { return Index; } //возвращает индекс текущей страницы
 
-    public int PageCount() //возвращает количество страниц в коллекции
-     {
-         return pageCount;
-     }
-    public int CurrentPageNumber() //возвращает индекс текущей страницы
-     {
-         return Index;
-     }
      public void TurnPages(int pageCount,char direction) //переворачивает" страницы на pageCount количества в направлении Direction
      {
          switch (direction)
@@ -86,14 +72,11 @@ public class PageableCollection<T>
              Console.WriteLine("Введите корректные данные в деапозоне допустимых значений");
          }
      }
+     public bool deletingPage(List<T> delete){ return  pages.Remove(delete); }
 
 
-     public bool deletingPage(List<T> delete)
-     {
-         return  pages.Remove(delete);
-     }
 
-     public List<T> GetPageByIndex(int Index)  //возвращает элементы страницы соответствующей индексу в коллекции страниц
+     public ICollection<T> GetPageByIndex(int Index)  //возвращает элементы страницы соответствующей индексу в коллекции страниц
      {
          try
          {
@@ -106,11 +89,11 @@ public class PageableCollection<T>
          }
 
      }
-     public List<T> GetCurrentPage() //возвращает элементы с текущей страницы (начинается с 0)
+     public  ICollection<T> GetCurrentPage() //возвращает элементы с текущей страницы (начинается с 0)
      {
          return pages[Index];
      }
-     public List<T> GetNextPage() // возвращает элементы со следующей страницы
+     public  ICollection<T> GetNextPage() // возвращает элементы со следующей страницы
      {
          try
          {
@@ -122,7 +105,7 @@ public class PageableCollection<T>
          }
 
      }
-     public List<T> GetPreviousPage() // возвращает элементы с предыдущей страницы
+     public  ICollection<T> GetPreviousPage() // возвращает элементы с предыдущей страницы
      {
          try
          {
@@ -131,7 +114,6 @@ public class PageableCollection<T>
          catch (ArgumentOutOfRangeException)
          {
              throw new Exception("Вы попробывали выйти за пределы");
-
          }
      }
 

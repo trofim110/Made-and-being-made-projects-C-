@@ -3,3 +3,13 @@
 /home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.AssemblyInfoInputs.cache
 /home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.AssemblyInfo.cs
 /home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.csproj.CoreCompileInputs.cache
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/bin/Debug/net6.0/Counting method of the class
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/bin/Debug/net6.0/Counting method of the class.deps.json
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/bin/Debug/net6.0/Counting method of the class.runtimeconfig.json
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/bin/Debug/net6.0/Counting method of the class.dll
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/bin/Debug/net6.0/ref/Counting method of the class.dll
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/bin/Debug/net6.0/Counting method of the class.pdb
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.dll
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/ref/Counting method of the class.dll
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.pdb
+/home/nikolai/RiderProjects/Tasks/Counting method of the class/obj/Debug/net6.0/Counting method of the class.genruntimeconfig.cache
