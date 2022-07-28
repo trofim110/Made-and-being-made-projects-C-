@@ -17,7 +17,7 @@ public class PageableCollection<T>
           if (items.Count-i>pageSize)
           {
               i += pageSize;
-              if ((items.Count-i<pageSize)&&(items.Count-i<pageSize))
+              if ((items.Count % pageSize!=0)&&(items.Count-i<pageSize))
               {
                   pages.Add(items.GetRange(i,items.Count % pageSize));
                   break;
