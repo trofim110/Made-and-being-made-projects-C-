@@ -59,4 +59,20 @@ public class Exceptions
         test.TurnPageForward();
         Assert.Throws<Exception>(() =>test.GetNextPage());
     }
+
+
+}
+public class Exceptions2
+{
+
+    [Fact]
+    public void сonstructorExceptions ()
+    {
+        var str = new List<int>() { 1, 2, 3, 4, 5, };
+        var test = new PageableCollection<int>(str,3) {};
+
+
+    }
+
+
 }
