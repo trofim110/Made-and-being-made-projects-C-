@@ -7,10 +7,10 @@ public class PageableCollection<T>
 
      public PageableCollection(List<T> items, int pageSize)
      {
-         if (!items?.Any() ?? false)
-         {
-             throw new Exception("Вы ввели некоректную колекцию");
-         }
+         if (!items?.Any() ?? false) { throw new Exception("Вы ввели пустую или некоректную колекцию"); }
+         if (pageSize == 0) { throw new Exception("Размер не равен нулю"); }
+
+
          for (int i = 0; i < items.Count;)
         {
           pages.Add(items.GetRange(i,pageSize));//Добавляем страници в колекции
@@ -123,6 +123,9 @@ class  sss
 {
     static void Main()
     {
+        var str = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        var test = new PageableCollection<int>(str, 3) { };
+        test.OpenPage(3);
 
     }
 }
